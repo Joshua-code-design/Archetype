@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>DGital - Digital Agency HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+  .letter-spacing-2 {
+      letter-spacing: 2px;
+  }
+  
+  .archetype-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .archetype-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border-color: rgba(13, 110, 253, 0.2);
+  }
+  
+  .badge {
+      font-weight: 500;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+  }
+</style>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0">Discover Your Jungian Archetype</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
+                        <a href="about.html" class="nav-item nav-link active">About</a>
+                        <a href="quiz.html" class="nav-item nav-link">Take the Quiz</a>
+                        <a href="team.html" class="nav-item nav-link">Result</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get Started</a>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-primary hero-header">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-12 text-center">
+                            <h1 class="text-white animated slideInDown">About Us</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Feature Start -->
+        <div class="container-fluid py-5 bg-gradient" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+          <div class="container py-5">
+              <div class="row justify-content-center">
+                  <div class="col-lg-10">
+                      <div class="text-center mb-5">
+                          <h6 class="text-primary text-uppercase letter-spacing-2 mb-2">Psychological Framework</h6>
+                          <h2 class="display-4 fw-bold mb-4">The Jungian Archetypes</h2>
+                          <div class="divider mx-auto mb-4" style="width: 70px; height: 3px; background-color: #0d6efd;"></div>
+                          <p class="lead text-muted mb-0">Discover the fundamental patterns within the collective unconscious that shape human behavior and motivation across cultures and time.</p>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="row g-4 justify-content-center">
+                  <div class="col-lg-4 col-md-6">
+                      <div class="archetype-card h-100 position-relative overflow-hidden rounded-4 shadow-sm" style="transition: all 0.3s ease;">
+                          <div class="card-body p-4 d-flex flex-column">
+                              <div class="icon-box mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 60px; height: 60px;">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#0d6efd" class="bi bi-shield" viewBox="0 0 16 16">
+                                      <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                                  </svg>
+                              </div>
+                              <h4 class="fw-bold mb-3">The Hero</h4>
+                              <p class="text-muted">Represents courage, determination, and the will to overcome challenges. The Hero embodies the human desire to make a positive impact through strength and bravery.</p>
+                              <div class="mt-auto">
+                                
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="col-lg-4 col-md-6">
+                      <div class="archetype-card h-100 position-relative overflow-hidden rounded-4 shadow-sm" style="transition: all 0.3s ease;">
+                          <div class="card-body p-4 d-flex flex-column">
+                              <div class="icon-box mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 60px; height: 60px;">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#0d6efd" class="bi bi-book" viewBox="0 0 16 16">
+                                      <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                                  </svg>
+                              </div>
+                              <h4 class="fw-bold mb-3">The Sage</h4>
+                              <p class="text-muted">Embodies wisdom, knowledge, and the search for truth. The Sage represents our intrinsic desire to understand the world through analysis and deep contemplation.</p>
+                              <div class="mt-auto">
+                                  
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="col-lg-4 col-md-6">
+                      <div class="archetype-card h-100 position-relative overflow-hidden rounded-4 shadow-sm" style="transition: all 0.3s ease;">
+                          <div class="card-body p-4 d-flex flex-column">
+                              <div class="icon-box mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 60px; height: 60px;">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#0d6efd" class="bi bi-heart" viewBox="0 0 16 16">
+                                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                  </svg>
+                              </div>
+                              <h4 class="fw-bold mb-3">The Innocent</h4>
+                              <p class="text-muted">Symbolizes purity, optimism, and goodness. The Innocent seeks happiness through embracing simplicity and maintaining faith in positive outcomes.</p>
+                              <div class="mt-auto">
+                                  
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="col-lg-4 col-md-6">
+                      <div class="archetype-card h-100 position-relative overflow-hidden rounded-4 shadow-sm" style="transition: all 0.3s ease;">
+                          <div class="card-body p-4 d-flex flex-column">
+                              <div class="icon-box mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 60px; height: 60px;">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#0d6efd" class="bi bi-compass" viewBox="0 0 16 16">
+                                      <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                      <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+                                  </svg>
+                              </div>
+                              <h4 class="fw-bold mb-3">The Explorer</h4>
+                              <p class="text-muted">Represents independence, adventure, and self-discovery. The Explorer embodies our desire for freedom and authentic experiences through journeys both physical and spiritual.</p>
+                              <div class="mt-auto">
+                                  
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="col-lg-4 col-md-6">
+                      <div class="archetype-card h-100 position-relative overflow-hidden rounded-4 shadow-sm" style="transition: all 0.3s ease;">
+                          <div class="card-body p-4 d-flex flex-column">
+                              <div class="icon-box mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 60px; height: 60px;">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#0d6efd" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                                      <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+                                  </svg>
+                              </div>
+                              <h4 class="fw-bold mb-3">The Creator</h4>
+                              <p class="text-muted">Embodies innovation, imagination, and artistic expression. The Creator manifests our innate desire to build meaningful things and leave a lasting cultural legacy.</p>
+                              <div class="mt-auto">
+                                 
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="col-lg-4 col-md-6">
+                      <div class="archetype-card h-100 position-relative overflow-hidden rounded-4 shadow-sm" style="transition: all 0.3s ease;">
+                          <div class="card-body p-4 d-flex flex-column">
+                              <div class="icon-box mb-3 d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10" style="width: 60px; height: 60px;">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#0d6efd" class="bi bi-crown" viewBox="0 0 16 16">
+                                      <path d="M2.5 15a.5.5 0 1 1 0-1h11a.5.5 0 1 1 0 1h-11zm9.257-11.454.3.006a.5.5 0 0 1 .445.445l.005.3.047.047-.305.286a.5.5 0 0 1-.708 0l-.306-.286.047-.047.005-.3a.5.5 0 0 1 .445-.445l.3-.006zM8 12.5a.5.5 0 0 1-.5-.5V8.707L6.354 9.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 8.707V12a.5.5 0 0 1-.5.5z"/>
+                                      <path d="M2.118 8.146A.5.5 0 0 1 2.5 8H5.55a.5.5 0 0 1 0 1H3.309l0 .434a.5.5 0 0 1-.59.49L2.49 9.91a.5.5 0 0 1-.484-.399L1.549 7.47a.5.5 0 0 1 .69-.568l.865.284zM13.882 8.146A.5.5 0 0 1 13.5 8h-3.05a.5.5 0 0 1 0 1h2.241l0 .434a.5.5 0 0 1 .59.49l.23.014a.5.5 0 0 1 .484-.399l.458-2.04a.5.5 0 0 1 .69.568l-.865.284z"/>
+                                  </svg>
+                              </div>
+                              <h4 class="fw-bold mb-3">The Ruler</h4>
+                              <p class="text-muted">Symbolizes order, control, and leadership. The Ruler represents our desire to create structure and stability through assuming responsibility and establishing clear boundaries.</p>
+                              <div class="mt-auto">
+                                  
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </div>
+      
+        
+
+        
+        <!-- Feature End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="section-title text-secondary">About Us<span></span></p>
+                        <h1 class="mb-5">Introduction to Carl Jung’s Archetype Theory</h1>
+                        <p class="mb-4"></p>
+                        <div class="skill mb-4">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">DigiArchetypes are universal, recurring symbols or characters in mythology, dreams, literature, and human experience. Carl Jung, a renowned Swiss psychologist, proposed that these archetypes represent fundamental human experiences and psychological patterns. The theory suggests that every individual carries several 
+                                    archetypes within their unconscious mind that influence our behaviors, relationships, and self-perception.tal Marketing</p>
+                            </div>
+                        </div>
+                        <div class="skill mb-4">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Why Archetypes Matter</p>
+                            </div>
+                            <span>Understanding your archetypes can give you insights into your behavior, motivations, and struggles, leading to greater self-awareness. Embracing your archetypes can promote healing, personal growth, and better relationships. </span>
+                        </div>
+                        <div class="skill mb-4">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">By identifying which archetypes are dominant in your personality, you can</p>
+                            </div>
+                            <ul>
+                                <li>Gain clarity about your unconscious patterns</li>
+                                <li>Develop greater self-compassion</li>
+                                <li>Make more aligned life and career choices</li>
+                                <li>Improve your relationships with others</li>
+                                <li>Navigate life challenges with greater wisdom</li>
+                            </ul>
+                            
+                        </div>
+                        <a href="quiz.html" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Take the Quiz</a>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/about.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Facts Start -->
+        <!-- <div class="container-xxl bg-primary fact py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                        <i class="fa fa-certificate fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2" data-toggle="counter-up">1234</h1>
+                        <p class="text-white mb-0">Years Experience</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                        <i class="fa fa-users-cog fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2" data-toggle="counter-up">1234</h1>
+                        <p class="text-white mb-0">Team Members</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                        <i class="fa fa-users fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2" data-toggle="counter-up">1234</h1>
+                        <p class="text-white mb-0">Satisfied Clients</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                        <i class="fa fa-check fa-3x text-secondary mb-3"></i>
+                        <h1 class="text-white mb-2" data-toggle="counter-up">1234</h1>
+                        <p class="text-white mb-0">Compleate Projects</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Facts End -->
+        
+
+        <!-- Team Start -->
+        <!-- <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title text-secondary justify-content-center"><span></span>Our Team<span></span></p>
+                    <h1 class="text-center mb-5">Our Team Members</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item bg-light rounded">
+                            <div class="text-center border-bottom p-4">
+                                <img class="img-fluid rounded-circle mb-4" src="img/team-1.jpg" alt="">
+                                <h5>John Doe</h5>
+                                <span>CEO & Founder</span>
+                            </div>
+                            <div class="d-flex justify-content-center p-4">
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item bg-light rounded">
+                            <div class="text-center border-bottom p-4">
+                                <img class="img-fluid rounded-circle mb-4" src="img/team-2.jpg" alt="">
+                                <h5>Jessica Brown</h5>
+                                <span>Web Designer</span>
+                            </div>
+                            <div class="d-flex justify-content-center p-4">
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item bg-light rounded">
+                            <div class="text-center border-bottom p-4">
+                                <img class="img-fluid rounded-circle mb-4" src="img/team-3.jpg" alt="">
+                                <h5>Tony Johnson</h5>
+                                <span>SEO Expert</span>
+                            </div>
+                            <div class="d-flex justify-content-center p-4">
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Team End -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+          <div class="container py-5 px-lg-5">
+              <div class="row g-5">
+                  <div class="col-md-6 col-lg-3">
+                      <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                      <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, </p>
+                      <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                      <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                      <div class="d-flex pt-2">
+                          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                      <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
+                      <a class="btn btn-link" href="">About Us</a>
+                      <a class="btn btn-link" href="">Contact Us</a>
+                      <a class="btn btn-link" href="">Privacy Policy</a>
+                      <a class="btn btn-link" href="">Terms & Condition</a>
+                      <a class="btn btn-link" href="">Career</a>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                      <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
+                      <div class="row g-2">
+                          <div class="col-4">
+                              <img class="img-fluid" src="img/portfolio-1.jpg" alt="Image">
+                          </div>
+                          <div class="col-4">
+                              <img class="img-fluid" src="img/portfolio-2.jpg" alt="Image">
+                          </div>
+                          <div class="col-4">
+                              <img class="img-fluid" src="img/portfolio-3.jpg" alt="Image">
+                          </div>
+                          <div class="col-4">
+                              <img class="img-fluid" src="img/portfolio-4.jpg" alt="Image">
+                          </div>
+                          <div class="col-4">
+                              <img class="img-fluid" src="img/portfolio-5.jpg" alt="Image">
+                          </div>
+                          <div class="col-4">
+                              <img class="img-fluid" src="img/portfolio-6.jpg" alt="Image">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                      <div class="position-relative w-100 mt-3">
+                          <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                          <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container px-lg-5">
+              <div class="copyright">
+                  <div class="row">
+                      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                          &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+            
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                      </div>
+                      <div class="col-md-6 text-center text-md-end">
+                          <div class="footer-menu">
+                              <a href="">Home</a>
+                              <a href="">Cookies</a>
+                              <a href="">Help</a>
+                              <a href="">FQAs</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
