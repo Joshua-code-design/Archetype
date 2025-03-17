@@ -31,6 +31,260 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+<style>
+        .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+#result-container {
+    background-color: var(--card-bg, #fff);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.archetype-header {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.archetype-image-container {
+    flex: 0 0 330px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.archetype-image {
+    width: 200%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.archetype-header-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#archetype-name {
+    font-size: 2.2rem;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+#archetype-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.gender-label {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.content-section {
+    padding: 40px;
+}
+
+.section-title {
+    position: relative;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+#archetype-tips {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 15px;
+}
+
+#archetype-tips li {
+    padding: 15px 20px;
+    background-color: var(--accent-color, #f5f5f5);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+#archetype-tips li::before {
+    content: '✓';
+    margin-right: 15px;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.share-section {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.share-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.share-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.share-button svg {
+    margin-right: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Custom themes for each archetype */
+.Hero-theme {
+    --primary-color: #d9534f;
+    --secondary-color: #e57373;
+
+}
+
+.Sage-theme {
+    --primary-color: #5bc0de;
+    --secondary-color: #7fb1bf;
+
+}
+
+.Magician-theme {
+    --primary-color: #9c27b0;
+    --secondary-color: #ba68c8;
+   
+}
+
+.Innocent-theme {
+    --primary-color: #f0ad4e;
+    --secondary-color: #ffcc80;
+    
+}
+
+.Ruler-theme {
+    --primary-color: #3f51b5;
+    --secondary-color: #7986cb;
+  
+}
+
+.Caregiver-theme {
+    --primary-color: #4caf50;
+    --secondary-color: #81c784;
+    
+}
+
+@media (max-width: 992px) {
+    .archetype-header {
+        flex-direction: column;
+    }
+    
+    .archetype-image-container {
+        flex: 0 0 auto;
+        padding: 30px 30px 0;
+    }
+    
+    .archetype-header-content {
+        padding: 20px 30px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .archetype-image {
+        height: 350px;
+    }
+    
+    #archetype-tips {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-section {
+        padding: 25px;
+    }
+    
+    #archetype-name {
+        font-size: 1.8rem;
+    }
+    
+    .share-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .share-button {
+        margin-bottom: 10px;
+    }
+}
+</style>
 
 <body>
     <div class="container-xxl bg-white p-0">
@@ -61,7 +315,7 @@
                         <a href="team.html" class="nav-item nav-link active">Result</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get Started</a>
+                   
                 </div>
             </nav>
 
@@ -80,6 +334,45 @@
         
 
         <!-- Team Start -->
+        <div class="container">
+            <header>
+                <h1 class="animate__animated animate__fadeIn">Your Personality Archetype</h1>
+                <p class="subtitle animate__animated animate__fadeIn">Discover your core strengths and opportunities for growth</p>
+            </header>
+            
+            <div id="result-container" class="animate__animated animate__fadeInUp">
+                <div class="archetype-header">
+                    <div class="archetype-image-container">
+                        <img id="archetype-image" class="archetype-image" src="/api/placeholder/400/400" alt="Archetype Image">
+                    </div>
+                    <div class="archetype-header-content">
+                        <span id="gender-indicator" class="gender-label"></span>
+                        <h2 id="archetype-name"></h2>
+                        <p id="archetype-description"></p>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <h3 class="section-title">Self-Improvement Tips</h3>
+                    <ul id="archetype-tips"></ul>
+                    
+                    <div class="share-section">
+                        <button class="share-button">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                            Share on Facebook
+                        </button>
+                        <button class="share-button">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                            Share on Twitter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <!-- Team End -->
         
@@ -180,6 +473,323 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        const archetypeData = {
+          "Orphan": {
+              male: {
+                  description: "You seek connection and belonging, shaped by early wounds that foster empathy and resilience. You value trust and community but must avoid passivity or resentment.",
+                  tips: [
+                      "Recognize that you are not alone. True belonging comes from embracing connections rather than isolating yourself.",
+                      "Focus on solutions, not victimhood. Instead of dwelling on past hardships, channel your energy into growth and progress.",
+                      "Cultivate resourcefulness. Adapt to challenges with creativity and perseverance, turning obstacles into opportunities."
+                  ],
+                  image: "img/boy.png",
+                  
+              },
+              female: {
+                  description: "Deeply empathetic and realistic, you long for belonging and uplift others through shared struggles. Avoid helplessness or rejecting support that helps you grow.",
+                  tips: [
+                      "Embrace the strength in support. Building mutual connections makes you stronger, not weaker.",
+                      "Your past does not define you. Learn from hardships, but don’t let them limit your potential.",
+                      "Balance humility with self-worth. You deserve respect and space, without feeling obligated to prove your value."
+                  ],
+                  image: "img/dora.png",
+                  
+              },
+              default: {
+                  description: "You are courageous and driven to protect and inspire others. You take challenges head-on and never back down. As a Hero, you consistently demonstrate bravery in the face of adversity and serve as an inspiration to those around you. Your natural leadership abilities and determination make you someone others look to during difficult times.",
+                  tips: [
+                      "Embrace teamwork and delegation - even heroes need support.",
+                      "Take time for self-care to avoid burnout and maintain your strength.",
+                      "Continue to seek new challenges for growth while acknowledging your limitations."
+                  ],
+                  image: "/api/placeholder/400/400",
+                 
+              }
+          },
+          "Lover": {
+              male: {
+                  description: "As a male Sage, you are driven by intellectual curiosity and the pursuit of truth. You enjoy analyzing complex problems and sharing your insights with others. Your methodical approach to gathering and evaluating information makes you a valuable advisor. You often find yourself in mentor roles where your wisdom and perspective can benefit others.",
+                  tips: [
+                      "Practice expressing your thoughts with clarity and patience when others don't immediately understand.",
+                      "Recognize that emotional intelligence is as valuable as intellectual knowledge.",
+                      "Share your wisdom through teaching or writing to create lasting impact."
+                  ],
+                  image: "img/boy.png",
+                  
+              },
+              female: {
+                  description: "As a female Sage, you combine intellectual depth with intuitive understanding. Your insights come from both careful analysis and deep emotional intelligence. You excel at seeing patterns and connections others miss, making you an exceptional problem-solver and guide. Your ability to communicate complex ideas with clarity makes you a natural teacher and mentor.",
+                  tips: [
+                      "Trust your intuition alongside your analytical abilities - they complement each other.",
+                      "Create spaces where your wisdom can be shared without interruption or dismissal.",
+                      "Find balance between seeking knowledge and applying it practically in your life."
+                  ],
+                  image: "img/dora.png",
+                  
+              },
+              default: {
+                  description: "You seek wisdom and knowledge above all else. You enjoy analyzing situations and understanding the deeper meanings of life. As a Sage, your thirst for truth and clarity guides your decisions, and you often find yourself in the role of advisor or mentor. Your analytical mind helps you see beyond surface-level appearances.",
+                  tips: [
+                      "Engage in meaningful discussions that challenge your perspective.",
+                      "Practice active listening to gain insights from others' experiences.",
+                      "Balance knowledge with action - wisdom is most valuable when applied."
+                  ],
+                  image: "/api/placeholder/400/400",
+                
+              }
+          },
+          "Jester": {
+              male: {
+                  description: "As a male Magician, you have a unique ability to transform situations through vision and innovation. You see possibilities where others see roadblocks and can articulate compelling visions of the future. Your confidence in pursuing unconventional solutions and willingness to take calculated risks sets you apart. You excel at connecting seemingly unrelated concepts to create something new.",
+                  tips: [
+                      "Channel your innovative thinking toward helping others realize their potential.",
+                      "Practice grounding your visionary ideas with practical implementation steps.",
+                      "Develop patience when others take time to understand your unconventional thinking."
+                  ],
+                  image: "img/boy.png",
+                 
+              },
+              female: {
+                  description: "As a female Magician, you combine creativity with practical intuition. Your transformative power comes from seeing beyond conventional limitations and inspiring others to embrace change. You have a natural talent for helping people see new perspectives and possibilities. Your approach to problem-solving often incorporates both analytical thinking and intuitive leaps that lead to breakthrough solutions.",
+                  tips: [
+                      "Embrace your unique perspective without feeling the need to justify your intuitive insights.",
+                      "Seek environments that nurture rather than constrain your creative vision.",
+                      "Use your transformative abilities to create meaningful change in areas you're passionate about."
+                  ],
+                  image: "img/dora.png",
+                  
+              },
+              default: {
+                  description: "You are an innovator and problem solver with a unique perspective. You believe in transformation and finding creative solutions where others see only obstacles. As a Magician, you connect ideas in unexpected ways and help manifest change. Your visionary thinking often leads to breakthroughs that others might miss.",
+                  tips: [
+                      "Experiment with new ideas and approaches without fear of failure.",
+                      "Stay adaptable to change and open to unexpected possibilities.",
+                      "Use your insight and innovative thinking to help others transform their circumstances."
+                  ],
+                  image: "/api/placeholder/400/400",
+                  
+              }
+          },
+          "Ruler": {
+              male: {
+                  description: "As a male Ruler, you naturally take command of situations and establish order. You have a clear vision of how things should be structured and the determination to implement that vision. Your strength lies in creating systems that function efficiently and in making difficult decisions with confidence. People look to you for leadership during challenging times.",
+                  tips: [
+                      "Practice collaborative leadership that incorporates diverse perspectives and talents.",
+                      "Work on distinguishing between situations that require control and those that need guidance.",
+                      "Develop emotional intelligence to better understand and respond to the needs of those you lead."
+                  ],
+                  image: "img/boy.png",
+                  
+              },
+              female: {
+                  description: "As a female Ruler, you lead with both authority and insight. You excel at creating collaborative environments while maintaining clear direction. Your leadership style often combines strategic thinking with emotional intelligence, allowing you to build strong, effective teams. You have a talent for empowering others while ensuring organizational goals are met efficiently.",
+                  tips: [
+                      "Embrace your leadership style without apology or unnecessary accommodation.",
+                      "Build networks with other female leaders for support and perspective.",
+                      "Balance assertiveness with openness to ensure your team feels both guided and valued."
+                  ],
+                  image: "img/dora.png",
+                  
+              },
+              default: {
+                  description: "You are a natural leader who values structure, control, and responsibility. You excel at creating order from chaos and establishing systems that work efficiently. As a Ruler, you take charge of situations confidently and help others find their place within the greater whole. Your organizational skills and clear vision make you an effective authority figure.",
+                  tips: [
+                      "Lead with empathy and understand the diverse needs of those you guide.",
+                      "Empower others rather than control them - true leadership creates more leaders.",
+                      "Learn to adapt to change and remain flexible when circumstances shift."
+                  ],
+                  image: "/api/placeholder/400/400",
+                  
+              }
+          },
+          "Caregiver": {
+              male: {
+                  description: "As a male Caregiver, you bring strength through support and protection. You find fulfillment in being there for others and creating safe environments where people can thrive. Your empathy allows you to understand others' needs on a deep level, and you're willing to put those needs before your own. Your nurturing nature often surprises people who expect more traditional masculine traits.",
+                  tips: [
+                      "Recognize that your caregiving nature is a strength, not a contradiction to masculinity.",
+                      "Set clear boundaries to prevent burnout and resentment from always putting others first.",
+                      "Find ways to receive care and support from others - caregiving should be reciprocal."
+                  ],
+                  image: "img/boy.png",
+                  
+              },
+              female: {
+                  description: "As a female Caregiver, you have exceptional emotional intelligence and nurturing abilities. You intuitively understand others' needs and create environments where people feel safe and supported. Your strength comes from your capacity for empathy and your willingness to be there for others. You find deep fulfillment in helping others grow and overcome challenges.",
+                  tips: [
+                      "Establish clear boundaries to prevent compassion fatigue and burnout.",
+                      "Schedule regular self-care and don't feel guilty about meeting your own needs.",
+                      "Recognize when helping becomes enabling and learn to support growth through appropriate challenge."
+                  ],
+                  image: "img/dora.png",
+                 
+              },
+              default: {
+                  description: "You are compassionate and nurturing, finding purpose in helping and supporting others. Your empathy allows you to understand people's needs, often before they recognize them themselves. As a Caregiver, you create safe spaces for growth and healing. Your generous spirit makes you a source of comfort and strength for many.",
+                  tips: [
+                      "Set boundaries to avoid exhaustion and compassion fatigue.",
+                      "Take time for self-care - you cannot pour from an empty cup.",
+                      "Continue helping others but don't neglect your own needs and dreams."
+                  ],
+                  image: "/api/placeholder/400/400",
+                  
+              }
+          },
+          "Explorer": {
+              male: {
+                  description: "As a male Explorer, you have an insatiable curiosity and a love for adventure. You're constantly seeking new experiences and pushing boundaries. Independence is essential to you, and you resist constraints or routines that feel limiting. Your fresh perspective and willingness to take the road less traveled inspires others to expand their horizons.",
+                  tips: [
+                      "Find ways to bring others along on your journey without compromising your independence.",
+                      "Develop the ability to appreciate depth as well as breadth in your experiences.",
+                      "Create some stability in your life to balance your adventurous spirit."
+                  ],
+                  image: "img/boy.png",
+                 
+              },
+              female: {
+                  description: "As a female Explorer, you forge your own path with confidence and curiosity. You value freedom and authenticity above conformity or comfort. Your adventurous spirit drives you to seek out new experiences and perspectives, often inspiring others to step beyond their comfort zones. You're not afraid to challenge convention and discover what lies beyond the established boundaries.",
+                  tips: [
+                      "Connect with other female explorers who understand your desire for freedom and adventure.",
+                      "Balance your independence with meaningful connections that support your explorations.",
+                      "Share your unique experiences and insights to inspire others to embrace their own explorer spirit."
+                  ],
+                  image: "img/dora.png",
+                  
+              },
+              default: {
+                  description: "You crave freedom and new experiences. You're independent and value authenticity above all else. As an Explorer, you constantly seek out the unknown and resist being confined by conventions or expectations. Your journey is about discovering who you truly are through diverse experiences and challenges.",
+                  tips: [
+                      "Find ways to create meaning from your experiences through reflection and sharing.",
+                      "Build connections with others who appreciate your independent spirit.",
+                      "Consider how your explorations can benefit others as well as yourself."
+                  ],
+                  image: "/api/placeholder/400/400",
+                  
+              }
+          },
+          "Rebel": {
+              male: {
+                  description: "As a male Rebel, you challenge the status quo and fight against systems you see as unjust or limiting. You're not afraid to stand up for what you believe in, even when it's unpopular. Your independent thinking and willingness to break rules for a purpose inspires others to question authority and think critically. You bring necessary disruption that often leads to positive change.",
+                  tips: [
+                      "Channel your rebellious energy toward constructive change rather than merely opposing.",
+                      "Learn when compromise can advance your cause more effectively than confrontation.",
+                      "Find like-minded communities where your revolutionary thinking can flourish."
+                  ],
+                  image: "img/boy.png",
+                  
+              },
+              female: {
+                  description: "As a female Rebel, you break boundaries and refuse to be limited by societal expectations. You're courageous in challenging norms and standing up for your convictions. Your ability to see through pretense and question established systems inspires others to find their authentic voice. You often serve as a catalyst for necessary change in communities and organizations.",
+                  tips: [
+                      "Recognize that vulnerability and rebellion can coexist powerfully.",
+                      "Build alliances with others who share your vision for change.",
+                      "Balance your revolutionary spirit with strategic thinking to create lasting impact."
+                  ],
+                  image: "img/dora.png",
+                 
+              },
+              default: {
+                  description: "You challenge the status quo and question authority. Your strength comes from being authentic and refusing to conform to expectations that don't align with your values. As a Rebel, you see problems in systems that others accept without question, and you're willing to stand alone for what you believe is right. Your courage inspires others to think independently.",
+                  tips: [
+                      "Focus your rebellious energy on creating positive alternatives rather than only opposing.",
+                      "Develop effective communication skills to help others understand your perspective.",
+                      "Find the balance between challenging norms and connecting with others."
+                  ],
+                  image: "/api/placeholder/400/400",
+                
+              }
+          },
+          "Innocent": {
+              male: {
+                  description: "As a male Innocent, you bring optimism and honesty to all situations. You see the good in people and approach life with a refreshing openness. Your trust in the world and belief in possibilities creates a contagious positive energy. You value authenticity and simplicity, often seeing through complications to the core of what matters.",
+                  tips: [
+                      "Maintain your optimism while developing healthy skepticism for necessary protection.",
+                      "Recognize that your openness is a strength in a world that often values cynicism.",
+                      "Find communities that appreciate your authentic approach to life."
+                  ],
+                  image: "img/boy.png",
+                 
+              },
+              female: {
+                  description: "As a female Innocent, you possess a natural optimism and genuine trust in life's goodness. Your authentic approach to relationships creates deep connections based on honesty and openness. You have a gift for seeing possibilities where others see problems, and your faith in people often brings out their best qualities. Your purity of intention is refreshing in complex social environments.",
+                  tips: [
+                      "Value your optimistic nature while developing discernment about people and situations.",
+                      "Create boundaries that protect your trusting nature without diminishing it.",
+                      "Share your vision of possibility with those who have become cynical or discouraged."
+                  ],
+                  image: "img/dora.png",
+                
+              },
+              default: {
+                  description: "You are optimistic and trust in the goodness of the world. You bring light and hope to others through your pure intentions and positive outlook. As an Innocent, you see the best in people and situations, which allows you to maintain faith even in difficult times. Your genuine approach to life inspires those around you.",
+                  tips: [
+                      "Develop critical thinking skills while maintaining your hopeful outlook.",
+                      "Stay positive but realistic about challenges you may face.",
+                      "Surround yourself with supportive people who appreciate your optimism."
+                  ],
+                  image: "/api/placeholder/400/400",
+                  
+              }
+          }
+      };
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const archetype = urlParams.get("archetype");
+      const gender = urlParams.get("gender");
+
+      if (archetype && archetypeData[archetype]) {
+          // Apply theme based on archetype
+          document.body.classList.add(`${archetype}-theme`);
+          
+          // Set archetype name
+          document.getElementById("archetype-name").innerText = archetype;
+          
+          // Determine which content set to use based on gender
+          let content;
+          if (gender === "male" && archetypeData[archetype].male) {
+              content = archetypeData[archetype].male;
+              document.getElementById("gender-indicator").innerText = "Male Perspective";
+          } else if (gender === "female" && archetypeData[archetype].female) {
+              content = archetypeData[archetype].female;
+              document.getElementById("gender-indicator").innerText = "Female Perspective";
+          } else {
+              content = archetypeData[archetype].default;
+              document.getElementById("gender-indicator").innerText = "Universal Perspective";
+          }
+          
+          // Set description and image
+          document.getElementById("archetype-description").innerText = content.description;
+          
+          const archetypeImage = document.getElementById("archetype-image");
+          archetypeImage.src = content.image;
+          archetypeImage.alt = content.alt;
+          
+          // Add tips with animation delay
+          let tipsList = document.getElementById("archetype-tips");
+          content.tips.forEach((tip, index) => {
+              let li = document.createElement("li");
+              li.innerText = tip;
+              li.classList.add('animate__animated', 'animate__fadeInRight');
+              li.style.animationDelay = `${0.3 + (index * 0.2)}s`;
+              tipsList.appendChild(li);
+          });
+          
+          // Add title with archetype name and gender
+          let titleText = `${archetype} Archetype`;
+          if (gender === "male" || gender === "female") {
+              titleText += ` (${gender.charAt(0).toUpperCase() + gender.slice(1)})`;
+          }
+          document.title = `${titleText} | Personality Quiz Results`;
+          
+      } else {
+          document.getElementById("result-container").innerHTML = `
+              <div class="content-section" style="text-align: center;">
+                  <h2>No Result Found</h2>
+                  <a href="quiz.html" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background-color: var(--primary-color); color: white; text-decoration: none; border-radius: 30px;">Take the Quiz</a>
+              </div>
+          `;
+      }
+  </script>
 </body>
 
 </html>
