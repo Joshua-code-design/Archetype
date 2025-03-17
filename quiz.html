@@ -31,6 +31,231 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+<style>
+     :root {
+            --success:  #ff99ff;
+        }
+ .container {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .card {
+            border-radius: 50px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .card-header {
+            background: white;
+            color:  #ff99ff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .card-body {
+            padding: 30px;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+            color:  #ff99ff;
+        }
+        
+        .subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        
+        .btns {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .btns:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+            background: #2868c6;
+        }
+        
+        .btns:active {
+            transform: translateY(1px);
+        }
+        
+        .btns-large {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+        }
+        
+        .btns-secondary {
+            background: var(--secondary);
+        }
+        
+        #quiz-container {
+            display: none;
+        }
+        
+        .progress-container {
+            width: 100%;
+            background: var(--light);
+            height: 8px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: var(--success);
+            border-radius: 4px;
+            transition: width 0.5s cubic-bezier(0.44, 0.95, 0.64, 0.97);
+        }
+        
+        .question {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        @media (min-width: 640px) {
+            .options-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .option-btn {
+            background: var(--light);
+            border: 2px solid transparent;
+            border-radius: var(--radius);
+            padding: 20px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .option-btn:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .option-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .option-btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+        
+        .quiz-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+        
+        .question-count {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Tooltip styles */
+        .tooltip {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color:  #ff99ff;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        
+        .tooltip-content {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background:  #ff99ff;
+            box-shadow: var(--shadow);
+            padding: 15px;
+            border-radius: var(--radius);
+            width: 250px;
+            display: none;
+            z-index: 10;
+            color: var(--dark);
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        
+        .tooltip:hover .tooltip-content {
+            display: block;
+        }
+
+        .gender-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        .gender-btn {
+            padding: 12px 20px;
+            background-color:  #6600cc;
+            color:  #ff99ff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gender-btn:hover {
+            background-color: #e0e0e0;
+            border-color: #ccc;
+        }
+</style>
 
 <body>
     <div class="container-xxl bg-white p-0">
@@ -61,7 +286,6 @@
                         <a href="team.html" class="nav-item nav-link">Result</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get Started</a>
                 </div>
             </nav>
 
@@ -69,7 +293,7 @@
                 <div class="container my-5 py-5 px-lg-5">
                     <div class="row g-5 py-5">
                         <div class="col-12 text-center">
-                            <h1 class="text-white animated slideInDown">Quiz Time!!!</h1>
+                            <h1 class="text-white animated slideInDown">Discover Your Archetype Uncover your hidden personality traits</h1>
                             <hr class="bg-white mx-auto mt-0" style="width: 90px;">
                         </div>
                     </div>
@@ -80,109 +304,54 @@
 
 
         <!-- Service Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div>
-                    <p class="section-title text-secondary text-center"><span></span>Explore Your Archetypes<span></span></p>
-                    <h1 class="text-center mb-5">Interactive Quiz Proper</h1>
-                </div>
-                <div id="quiz-container">
-                    <form id="quiz-form">
-                        <div class="mb-4">
-                            <h5>1. When faced with a challenge, how do you typically respond?</h5>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q1" id="q1-hero" value="Hero">
-                                <label class="form-check-label" for="q1-hero">Seek a solution or plan (Hero)</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q1" id="q1-sage" value="Sage">
-                                <label class="form-check-label" for="q1-sage">Reflect on the deeper meaning (Sage)</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q1" id="q1-innocent" value="Innocent">
-                                <label class="form-check-label" for="q1-innocent">Avoid confrontation (Innocent)</label>
-                            </div>
+        <div class="container">
+            <div id="intro-screen" class="card fade-in">
+                <div class="card-header">
+                    <div class="tooltip">
+                        <i class="fas fa-info-circle"></i>
+                        <div class="tooltip-content">
+                            This quiz contains 10 questions that will help determine your dominant personality archetype. Answer honestly for the most accurate results.
                         </div>
-                        <div class="mb-4">
-                            <h5>2. How do you feel about your personal growth?</h5>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q2" id="q2-creator" value="Creator">
-                                <label class="form-check-label" for="q2-creator">I am constantly evolving (Creator)</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q2" id="q2-rebel" value="Rebel">
-                                <label class="form-check-label" for="q2-rebel">I feel stuck and want change (Rebel)</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q2" id="q2-caregiver" value="Caregiver">
-                                <label class="form-check-label" for="q2-caregiver">I strive to care for others (Caregiver)</label>
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <h5>3. What drives you the most?</h5>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q3" id="q3-hero" value="Hero">
-                                <label class="form-check-label" for="q3-hero">Achieving success (Hero)</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q3" id="q3-sage" value="Sage">
-                                <label class="form-check-label" for="q3-sage">Gaining wisdom (Sage)</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q3" id="q3-rebel" value="Rebel">
-                                <label class="form-check-label" for="q3-rebel">Challenging norms (Rebel)</label>
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <h5>4. How do you handle conflicts?</h5>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q4" id="q4-caregiver" value="Caregiver">
-                                <label class="form-check-label" for="q4-caregiver">Mediate and support others (Caregiver)</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q4" id="q4-rebel" value="Rebel">
-                                <label class="form-check-label" for="q4-rebel">Confront directly (Rebel)</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q4" id="q4-innocent" value="Innocent">
-                                <label class="form-check-label" for="q4-innocent">Avoid conflicts (Innocent)</label>
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <h5>5. In social situations, you tend to:</h5>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q5" id="q5-explorer" value="Explorer">
-                                <label class="form-check-label" for="q5-explorer">Seek new experiences and connections (Explorer)</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q5" id="q5-ruler" value="Ruler">
-                                <label class="form-check-label" for="q5-ruler">Take charge and organize (Ruler)</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q5" id="q5-lover" value="Lover">
-                                <label class="form-check-label" for="q5-lover">Focus on building deep relationships (Lover)</label>
-                            </div>
-                        </div>
-                        <div id="gender-selection" class="mb-4">
-                            <h5>Please select your gender:</h5>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="gender-male" value="male">
-                                <label class="form-check-label" for="gender-male">Male</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="gender-female" value="female">
-                                <label class="form-check-label" for="gender-female">Female</label>
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-primary" onclick="validateAndCalculate()">See My Results</button>
-                    </form>
-                </div>
-                <div id="result-container" class="mt-5 card" style="display:none;">
-                    <div class="card-header">
-                        <h3 class="mb-0">Your Archetype Results</h3>
                     </div>
-                    <div class="card-body">
-                        <p id="result-text"></p>
+                </div>
+                <div class="card-body" style="text-align: center;">
+                    <p style="margin-bottom: 25px; color:  #101c29;">This quiz will reveal which of the 7 classic archetypes best matches your personality. Discover your strengths, weaknesses, and hidden talents!</p>
+                    <button id="start-btn" class="btns btns-large">Start Quiz <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+    
+            <div id="gender-screen" class="card">
+                <div class="card-header">
+                    <h1>Select Your Gender</h1>
+                    <p class="subtitle">This helps us personalize your results</p>
+                </div>
+                <div class="card-body" style="text-align: center;">
+                    <div class="gender-options">
+                        <button class="gender-btn" data-gender="male">Male</button>
+                        <button class="gender-btn" data-gender="female">Female</button>
+                        <button class="gender-btn" data-gender="prefer-not-to-say">Prefer Not to Say</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="quiz-container" class="card">
+                <div class="card-header">
+                    <h1>Personality Assessment</h1>
+                    <div class="tooltip">
+                        <i class="fas fa-info-circle"></i>
+                        <div class="tooltip-content">
+                            Choose the option that best reflects your natural tendencies, not what you think is the "right" answer.
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="progress-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                    <p id="question" class="question"></p>
+                    <div id="options" class="options-grid"></div>
+                    <div class="quiz-footer">
+                        <p id="question-count" class="question-count"></p>
                     </div>
                 </div>
             </div>
@@ -190,67 +359,6 @@
     
         
         <!-- Service End -->
-
-
-        <!-- Newsletter Start -->
-        <!-- <div class="container-xxl bg-primary newsletter py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 text-center">
-                        <p class="section-title text-white justify-content-center"><span></span>Newsletter<span></span></p>
-                        <h1 class="text-center text-white mb-4">Stay Always In Touch</h1>
-                        <p class="text-white mb-4">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Newsletter End -->
-
-
-        <!-- Testimonial Start -->
-        <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <p class="section-title text-secondary justify-content-center"><span></span>Testimonial<span></span></p>
-                <h1 class="text-center mb-5">What Say Our Clients!</h1>
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 65px; height: 65px;">
-                            <div class="ps-4">
-                                <h5 class="mb-1">Client Name</h5>
-                                <span>Profession</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 65px; height: 65px;">
-                            <div class="ps-4">
-                                <h5 class="mb-1">Client Name</h5>
-                                <span>Profession</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded my-4">
-                        <p class="fs-5"><i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 65px; height: 65px;">
-                            <div class="ps-4">
-                                <h5 class="mb-1">Client Name</h5>
-                                <span>Profession</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Testimonial End -->
         
 
         <!-- Footer Start -->
@@ -274,7 +382,6 @@
                         <a class="btn btn-link" href="">About Us</a>
                         <a class="btn btn-link" href="">Contact Us</a>
                         <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
                         <a class="btn btn-link" href="">Career</a>
                     </div>
                     <div class="col-md-6 col-lg-3">
@@ -349,7 +456,136 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/result.js"></script>
+    <script>
+      const quizData = [
+    { question: "How do you approach life?", options: [
+        { text: "With optimism and faith in the good.", archetype: "Innocent" },
+        { text: "With resilience, knowing life can be tough.", archetype: "Orphan" },
+        { text: "By nurturing and supporting others.", archetype: "Caregiver" },
+        { text: "Through love and deep connections.", archetype: "Lover" }
+    ]},
+    { question: "What is most important to you?", options: [
+        { text: "Happiness and simplicity.", archetype: "Innocent" },
+        { text: "Belonging and security.", archetype: "Orphan" },
+        { text: "Caring for others.", archetype: "Caregiver" },
+        { text: "Passion and romance.", archetype: "Lover" }
+    ]},
+    { question: "How do you handle challenges?", options: [
+        { text: "I trust that everything will work out.", archetype: "Innocent" },
+        { text: "I rely on my strength and independence.", archetype: "Orphan" },
+        { text: "I help others through it.", archetype: "Caregiver" },
+        { text: "I use humor to lighten the situation.", archetype: "Jester" }
+    ]},
+    { question: "What role do you play in a group?", options: [
+        { text: "The hopeful optimist.", archetype: "Innocent" },
+        { text: "The loyal friend.", archetype: "Orphan" },
+        { text: "The supportive caregiver.", archetype: "Caregiver" },
+        { text: "The charismatic leader.", archetype: "Ruler" }
+    ]},
+    { question: "What is your biggest strength?", options: [
+        { text: "Faith and positivity.", archetype: "Innocent" },
+        { text: "Resilience and adaptability.", archetype: "Orphan" },
+        { text: "Compassion and selflessness.", archetype: "Caregiver" },
+        { text: "Charisma and influence.", archetype: "Ruler" }
+    ]},
+    { question: "What makes you happiest?", options: [
+        { text: "A peaceful and simple life.", archetype: "Innocent" },
+        { text: "Feeling safe and accepted.", archetype: "Orphan" },
+        { text: "Making a difference in someone's life.", archetype: "Caregiver" },
+        { text: "Love and deep connections.", archetype: "Lover" }
+    ]},
+    { question: "What is your greatest fear?", options: [
+        { text: "Losing my innocence and faith.", archetype: "Innocent" },
+        { text: "Being abandoned or betrayed.", archetype: "Orphan" },
+        { text: "Not being able to help others.", archetype: "Caregiver" },
+        { text: "Being unloved or alone.", archetype: "Lover" }
+    ]},
+    { question: "How do you express yourself?", options: [
+        { text: "Through kindness and honesty.", archetype: "Innocent" },
+        { text: "Through loyalty and support.", archetype: "Orphan" },
+        { text: "Through selfless acts of service.", archetype: "Caregiver" },
+        { text: "Through humor and fun.", archetype: "Jester" }
+    ]},
+    { question: "Which best describes your personality?", options: [
+        { text: "Pure-hearted and hopeful.", archetype: "Innocent" },
+        { text: "Tough but kind-hearted.", archetype: "Orphan" },
+        { text: "Warm and nurturing.", archetype: "Caregiver" },
+        { text: "Charming and passionate.", archetype: "Lover" }
+    ]},
+    { question: "What is your ideal way to lead?", options: [
+        { text: "By inspiring with hope.", archetype: "Innocent" },
+        { text: "By earning trust and loyalty.", archetype: "Orphan" },
+        { text: "By protecting and guiding others.", archetype: "Caregiver" },
+        { text: "By ruling with authority and wisdom.", archetype: "Ruler" }
+    ]}
+];
+
+        let currentQuestion = 0;
+        let userResponses = {};
+        let userGender = "";
+
+        function startQuiz() {
+            document.getElementById("intro-screen").style.display = "none";
+            document.getElementById("gender-screen").style.display = "block";
+            document.getElementById("gender-screen").classList.add("fade-in");
+        }
+
+        function selectGender(gender) {
+            userGender = gender;
+            document.getElementById("gender-screen").style.display = "none";
+            document.getElementById("quiz-container").style.display = "block";
+            document.getElementById("quiz-container").classList.add("fade-in");
+            updateProgress();
+            showQuestion();
+        }
+
+        function showQuestion() {
+            if (currentQuestion >= quizData.length) {
+                showResults();
+                return;
+            }
+            let qData = quizData[currentQuestion];
+            document.getElementById("question").innerText = qData.question;
+            document.getElementById("question-count").innerText = `Question ${currentQuestion + 1} of ${quizData.length}`;
+            
+            let optionsDiv = document.getElementById("options");
+            optionsDiv.innerHTML = "";
+            qData.options.forEach(option => {
+                let btn = document.createElement("button");
+                btn.innerText = option.text;
+                btn.classList.add("option-btn");
+                btn.onclick = () => selectOption(option.archetype);
+                optionsDiv.appendChild(btn);
+            });
+            updateProgress();
+        }   
+
+        function selectOption(archetype) {
+            userResponses[archetype] = (userResponses[archetype] || 0) + 1;
+            currentQuestion++;
+            showQuestion();
+        }
+
+        function updateProgress() {
+            document.getElementById("progress-bar").style.width = (currentQuestion / quizData.length) * 100 + "%";
+        }
+
+        function showResults() {
+            let maxArchetype = Object.keys(userResponses).reduce((a, b) => userResponses[a] > userResponses[b] ? a : b);
+            window.location.href = `team.html?archetype=${maxArchetype}&gender=${userGender}`;
+        }
+
+        document.getElementById("start-btn").addEventListener("click", startQuiz);
+        
+        // Add event listeners for gender buttons
+        document.querySelectorAll(".gender-btn").forEach(btn => {
+            btn.addEventListener("click", () => selectGender(btn.getAttribute("data-gender")));
+        });
+
+        // Initial setup
+        document.getElementById("gender-screen").style.display = "none";
+        document.getElementById("quiz-container").style.display = "none";
+    </script>
 </body>
 
 </html>
